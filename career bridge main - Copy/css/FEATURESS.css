@@ -1,0 +1,93 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hero-section {
+    background: url('https://st4.depositphotos.com/35744580/40428/i/450/depositphotos_404282100-stock-photo-feature-word-made-with-building.jpg') no-repeat center center/cover;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4em;
+    background-color: #fff;
+}
+
+.feature {
+    background-color: #0073e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1em;
+    padding: 2em;
+    width: 30%;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature i {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.testimonials {
+    background-color: #f0f0f0;
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.testimonial {
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 1em;
+    scroll-snap-align: center;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1em 2em;
+    margin: 2em 0;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #005bb5;
+}

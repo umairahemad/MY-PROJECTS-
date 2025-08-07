@@ -1,0 +1,58 @@
+/* Additional styles for FAQ page */
+.faq-hero {
+    height: 50vh;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzJ0UjcyD1j-aROKd3lnh2FPxO17AolUDRcg&s') no-repeat center center/cover;
+    height: 50vh;
+}
+
+.faq {
+    padding: 4em;
+    background-color: rgb(0, 0, 0);
+}
+
+.question {
+    background-color: aquamarine;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1em 0;
+    padding: 1.5em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.question h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.answer {
+    display: none;
+    margin-top: 1em;
+    font-size: 0.9em;
+    color: #00474d;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.question.active .answer {
+    display: block;
+    max-height: 500px; /* Adjust based on content */
+}
+
+.question::after {
+    content: '+';
+    font-size: 1.5em;
+    position: absolute;
+    right: 1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.question.active::after {
+    transform: translateY(-50%) rotate(45deg);
+}
