@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spam Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-container">
+    <div class="card">
+      <h1>📧 Spam Email Detector</h1>
+      <p>Paste your email content below and check if it's spam or not.</p>
+      <form action="/predict" method="post">
+        <textarea name="email_text" placeholder="Enter your email here..." required></textarea>
+        <button type="submit">🔍 Analyze</button>
+      </form>
+      {% if prediction %}
+        <div class="result">
+          <span class="{{ 'spam' if prediction == 'SPAM' else 'ham' }}">
+            Prediction: {{ prediction }}
+          </span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>
